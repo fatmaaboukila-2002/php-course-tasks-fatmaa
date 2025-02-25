@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
             $cnpass = $_POST['cnpass'];
             
                 if ($npass != $cnpass) {
-                    $message = '<div class="alert alert-danger">New passwords do not match</div>';
+                    $message = '<div class="alert alert-danger">New password does not match</div>';
                 } elseif ($npass == $pass) {
                     $message = '<div class="alert alert-warning">New password must be different from the current password</div>';
                 } else {
@@ -39,7 +39,6 @@ if (isset($_POST['submit'])) {
     <div class="container col-md-5">
         <div class="border rounded-3 shadow-sm p-5 bg-white">
             <h3 class="text-center mb-4">Change Password</h3>
-            <?php echo $message; ?>
             <form method="POST">
                 <div class="form-group mb-3">
                     <label for="Cpassword" class="fw-semibold">Current Password</label>
@@ -59,6 +58,7 @@ if (isset($_POST['submit'])) {
 
                 <button type="submit" name="submit" class="btn btn-primary w-100 py-2">Submit</button>
             </form>
+            <?php echo $message; ?>
         </div>
     </div>
 

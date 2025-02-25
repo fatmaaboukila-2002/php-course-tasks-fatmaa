@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $message = '<div class="alert alert-danger">Invalid email format.</div>';
     } 
     else {
-        $message = '<div class="alert alert-success">Registration successful!</div>';
+        $message = '<div class="alert alert-success">Registration successful</div>';
         $show = false;
     }
 }
@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container col-md-5">
         <div class="border rounded-3 shadow-sm p-5 bg-white">
             <h3 class="text-center mb-4">Registration Form</h3>
-            <?php echo $message; ?>
             <?php if ($show): ?>
             <form method="POST" action="">
                 <div class="form-group mb-3">
@@ -49,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" class="btn btn-primary w-100 py-2">Submit</button>
             </form>
             <?php endif; ?>
+            <?php echo $message; ?>
         </div>
     </div>
 </body>
